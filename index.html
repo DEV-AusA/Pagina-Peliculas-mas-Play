@@ -6,12 +6,16 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="#">
-    <link rel="icon" href="./assets/img/icons/logo-ausa.png" type="image/x-icon">
-    <title>Peliculas +play</title>
+    <link rel="icon" href="./assets/img/icons/+P.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Peliculas +Play</title>
 </head>
-<body>
+<body id="body-index">
 
-    <header>
+    <header class="header">
         <div>
             <nav class="navbar">
 
@@ -31,7 +35,7 @@
                 
                 <div class="navbar-home">
                     <div class="logo-play">
-                        <a href=""><img src="./assets/img/icons/+PLAY.png" alt=""></a>
+                        <a href="#"><img src="./assets/img/icons/+PLAY.png" alt=""></a>
                     </div>
                     <div>
                         <ul>   
@@ -44,9 +48,9 @@
 
                 <div class="navbar-links">
                     <ul>
+                        <li class="btn-links"><a href="./aboutme.html">Sobre mi</a></li>
                         <li class="btn-links"><a href="./suge.html">Sugerencia de la casa</a></li>
                         <li class="btn-links"><a href="./recom.html">Páginas recomendadas</a></li>
-                        <li class="btn-links"><a href="./aboutme.html">Sobre mi proyecto</a></li>
                     </ul>
                 </div>               
 
@@ -56,9 +60,14 @@
 
     <main>
 
-        <section></section>
+        <section>
+            <div id="contenedor-movies">               
 
+            </div>
+        </section>
     </main>
+
+    <script src="./scripts/index.js"></script>
     
 </body>
 </html>

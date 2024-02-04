@@ -1,27 +1,55 @@
-ACTIVIDAD 01
+class Movie{
+    constructor(id, image, title, release, overview){
+        this.id = id;
+        this.image = image;
+        this.title = title;
+        this.release = release;
+        this.overview = overview;
+    }
+}
 
-Clonar el repositorio del proyecto y explorar su estructura. Identificar los dos archivos package.json de ambas partes del proyecto.
+class Repository{
+    constructor(){
+        this.movies = [];
+    }
+    getAllMovies(){
+        return this.movies;
+    }
+    createMovie(object){
+        const {id, image, title, release, overview} = object;
+        const movie = new Movie(id, image, title, release, overview);
+        this.movies.push(movie);
+    }
+    addMovie(){
+    }
+};
+const repository = new Repository();
 
-ACTIVIDAD 02
+const newContainerHTML = () => {
+    const container = document.getElementById('contenedor-movies');
 
-Instalar las dependencias de la aplicación de Front-End y probar el funcionamiento con el comando “npm start”. Esto debería “levantar” nuestra aplicación de front en el navegador.
+    const newCard = document.createElement('div');
+    const newImage = document.createElement('img');
+    const newTitle = document.createElement('h2');
+    const newDateRelease = document.createElement('h3');
+    const newOverview = document.createElement('p');
+};
 
-ACTIVIDAD 03
+// $.get("https://api.themoviedb.org/3/movie/550?api_key=223af92cc732da1c02b1cde6cb997b6e", (data) => {
+//     console.log(data);
+// });
 
-Diseñar la página web con la que estaremos trabajando. Se trata de una página de películas, por lo que el diseño debe ser acorde a la temática. Esto implicará:
-
-    Generar los archivos css necesarios y vincularlos al documento index.html.
-
-    Generar la plantilla HTML con sus elementos y asignar las clases y ids correspondientes para seleccionarlos y darles estilos.
-
-ACTIVDAD 04
-
-Mapear los objetos incluídos en el array tempData para construir con sus datos las tarjetas correspondientes a cada película. Incluir estas tarjetas en el contenedor que hayas creado.
-
-ACTIVIDAD 05
-
-Incluir en la página web enlaces a páginas estáticas. Estas páginas estáticas (mínimo 2) tendrán una temática a tu elección. Sugerencias: “Sobre mi proyecto”, “Historia del cine”, “Webs recomendadas”.
-
-ACTIVIDAD 06
-
-Configurar correctamente los enlaces desde index.html para poder navegar hacia estas páginas, y luego desde las mismas poder regresar al index. 
+const settings = {
+    async: true,
+    crossDomain: true,
+    url: 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1',
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMjNhZjkyY2M3MzJkYTFjMDJiMWNkZTZjYjk5N2I2ZSIsInN1YiI6IjY1YmVmOWE0ZmM2NTM4MDEzMGU4Y2I0YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.58zVIB4SwGkqW-3ai1oltGNgEnR-Iw7VaglOBsUFnhc'
+    }
+};
+  
+$.ajax(settings).done((data) => {
+    console.log(data.results);
+});
