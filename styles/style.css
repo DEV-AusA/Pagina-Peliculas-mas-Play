@@ -7,10 +7,15 @@
     top: 0; /*requisito de sticky*/
     z-index: 2; /* prioridad x encima de todo*/
 }
+.boton-home:hover{
+    box-shadow: 0 0 1px 1px white;
+    border-radius: 15px;
+    transition: 200ms;
+}
 
 /* HEADER */
 
-.navbar{
+/* .navbar{
     display: inline-flex;
     width: 100%;
     height: 60px;
@@ -31,35 +36,32 @@
 }
 .navbar-redes a {
     vertical-align: middle;
-}
+} */
 
 .iconos{
 	width: 40px;
-	border-radius: 50%;
-	transition: 200ms;
+    transition: 200ms;
 }
 .iconos:hover{
     transition: 200ms;
     background-color: black;
 }
-.ausa{
+/* .ausa{
     width: 6%;
-}
-.ausa h1{
-    text-align: center;
-    transition: 300ms;
-    padding: 10px 0;
-    font-size: 1.2em;
-    font-weight: bold;
+} */
+.ausa a{
     transition: 300ms;
     color: white;
 }
-.ausa h1:hover{
-	transform: scale(1.1);
+.ausa a:hover{
 	transition: 300ms;
-	font-weight: bold;
-    text-shadow: 0 0 2px black;
+    color: #bebebe;
 }
+.rate{
+    width: 80px;
+    height: 80px;
+}
+/* 
 .btn-home{
     display: inline-flex;
     padding: 0 5px;
@@ -78,7 +80,7 @@
     width: 45%;
     display: inline-flex;
     justify-content: center;
-}
+} */
 .logo-play img{
     width: 80px;
     border-radius: 50px;
@@ -89,7 +91,7 @@
     transform: scale(1.2);
     transition: 300ms;
 }
-.navbar-links{
+/* .navbar-links{
     width: 33%;
     text-align: right;
     margin-right: 10px;
@@ -101,15 +103,21 @@
 	font-weight: bold;
 	margin: 10px 0;
 }
+*/
 .btn-links a{
-    text-decoration: none;
-	color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 0.9em;
 }
 .btn-links a:hover{
     color: #d5dfe1;
 }
+.card-movie{
+    transition: 300ms;
+}
+.card-movie:hover{
+    transform: scale(1.05);
+    transition: 300ms;
+}
+
 
 /* aboutme.css */
 
