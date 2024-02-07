@@ -97,6 +97,7 @@ const newContainerHTML = (object) => {
     rowColOcho.appendChild(releaseYear);
     rowColOcho.appendChild(durationMovieTitle);
     rowColOcho.appendChild(durationMovie);
+    rowColOcho.appendChild(directorMovie);
     rowColOcho.appendChild(directorMovieName);
     rowColCuatro.appendChild(rateMovieTitle);
     divRateMovieNumberDFlex.appendChild(newRate);
