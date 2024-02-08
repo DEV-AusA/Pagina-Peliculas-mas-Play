@@ -151,21 +151,6 @@ const cargarCardBanner = (array) => {
 
 };
 
-const imgBanner = () =>{
-
-    const cardOne = document.getElementById('banner-1');
-    const cardTwo = document.getElementById('banner-2');
-    const cardTree = document.getElementById('banner-3');
-
-    const urlCardOne = 'https://savethecat.com/wp-content/uploads/2017/05/r_guardiansofthegalaxyvol2_header_nowplaying_62b897d0.jpeg';
-    const urlCardTwo = 'https://retromash.com/wp-content/uploads/2015/12/anewhope.jpg';
-    const urlCardTree = 'https://s29288.pcdn.co/wp-content/uploads/2020/03/fellowship-of-the-ring-poster.jpg';
-
-    cardOne.src = urlCardOne;
-    cardTwo.src = urlCardTwo;
-    cardTree.src = urlCardTree;
-}
-
 const cargarCardMain = (array) => {
     
     const container = document.getElementById('container-movies');
@@ -259,7 +244,22 @@ function createPlayer(videoId, playerId) {
     });
 }
   
- // Función que se llama cuando el reproductor está listo
+ // function que se llama cuando el reproductor está listo
 function onPlayerReady(event) {
     event.target.playVideo(); // Inicia la reproducción del video automáticamente
 }
+
+const navHomeBtns = document.getElementById('nav-home-btns');
+// Obtener los elementos de lista (li) dentro de la lista
+const navHomeBtnsA = navHomeBtns.getElementsByTagName("a");
+
+// utilizo forEach para iterar sobre los elementos del Array.from
+Array.from(navHomeBtnsA).forEach((a) => {
+
+    a.addEventListener('mouseenter', (event)=>{
+        event.target.classList.add('active');
+    });
+    a.addEventListener('mouseleave', (event)=>{
+        event.target.classList.remove('active');
+    });
+});

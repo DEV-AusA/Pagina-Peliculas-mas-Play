@@ -7,12 +7,13 @@
     top: 0; /*requisito de sticky*/
     z-index: 2; /* prioridad x encima de todo*/
 }
-.boton-home:hover{
-    box-shadow: 0 0 1px 1px white;
-    border-radius: 15px;
-    transition: 200ms;
+/* bg de btns nav-bar */
+.nav > li > a.active, 
+.nav > li > a.active:focus, 
+.nav > li > a.active:hover {
+    background-color: black;
+    border-color: black;
 }
-
 .iconos{
 	width: 40px;
     transition: 200ms;
@@ -29,10 +30,6 @@
 	transition: 300ms;
     color: #bebebe;
 }
-.rate{
-    width: 80px;
-    height: 80px;
-}
 .logo-play img{
     width: 80px;
     border-radius: 50px;
@@ -43,11 +40,11 @@
     transform: scale(1.2);
     transition: 300ms;
 }
-.btn-links a{
-    font-family: 'Roboto', sans-serif;
-}
-.btn-links a:hover{
-    color: #d5dfe1;
+
+/*cards*/
+.rate{
+    width: 80px;
+    height: 80px;
 }
 .card-movie{
     transition: 300ms;
@@ -69,7 +66,6 @@
     background: linear-gradient(to right, rgb(187, 25, 25) 0%, rgb(18, 0, 79) 39%, rgba(0,0,0,0) 60%);
     pointer-events: none; /* Evitar que el pseudo-elemento interfiera con la interacción del usuario */
 }
-
 .img-carousel-2::before {
     content: ''; /* Importante: establecer contenido vacío para que el pseudo-elemento sea visible */
     position: absolute; /* Posicionar el pseudo-elemento sobre la imagen */
@@ -80,7 +76,6 @@
     background: linear-gradient(to right, rgb(56, 87, 91) 0%, rgb(8, 8, 9) 39%, rgba(0,0,0,0) 60%);
     pointer-events: none; /* Evitar que el pseudo-elemento interfiera con la interacción del usuario */
 }
-
 .img-carousel-3::before {
     content: ''; /* Importante: establecer contenido vacío para que el pseudo-elemento sea visible */
     position: absolute; /* Posicionar el pseudo-elemento sobre la imagen */
@@ -91,7 +86,6 @@
     background: linear-gradient(to right, rgb(67, 55, 31) 0%, rgb(35, 41, 53) 39%, rgba(0,0,0,0) 60%);
     pointer-events: none; /* Evitar que el pseudo-elemento interfiera con la interacción del usuario */
 }
-
 .banner-img{
     min-height: 475px;
 }
