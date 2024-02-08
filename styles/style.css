@@ -11,8 +11,15 @@
 .nav > li > a.active, 
 .nav > li > a.active:focus, 
 .nav > li > a.active:hover {
+    background-color: #d00000;
+    border-color: white;
+}
+.nav-tabs{
+    transition: 700ms;
+}
+.nav-tabs:hover {
     background-color: black;
-    border-color: black;
+    transition: 700ms;
 }
 .iconos{
 	width: 40px;
@@ -20,15 +27,7 @@
 }
 .iconos:hover{
     transition: 200ms;
-    background-color: black;
-}
-.ausa a{
-    transition: 300ms;
-    color: white;
-}
-.ausa a:hover{
-	transition: 300ms;
-    color: #bebebe;
+    background-color: #d00000;
 }
 .logo-play img{
     width: 80px;

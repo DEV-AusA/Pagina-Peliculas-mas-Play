@@ -259,6 +259,9 @@ Array.from(navHomeBtnsA).forEach((a) => {
     a.addEventListener('mouseenter', (event)=>{
         event.target.classList.add('active');
     });
+    a.addEventListener('click', (event)=>{
+        event.target.classList.add('active');
+    });
     a.addEventListener('mouseleave', (event)=>{
         event.target.classList.remove('active');
     });
