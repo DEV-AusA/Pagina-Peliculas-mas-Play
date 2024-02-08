@@ -1,5 +1,5 @@
-
 #body-index{
+    background-color: black;
 }
 .header{
     background-color: #d00000;
@@ -13,31 +13,6 @@
     transition: 200ms;
 }
 
-/* HEADER */
-
-/* .navbar{
-    display: inline-flex;
-    width: 100%;
-    height: 60px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    align-items: center;
-}
-.btn-redes{
-    display: inline-flex;
-    padding: 10px 0;
-    font-size: 1.2em;
-    font-weight: bold;
-    transition: 300ms;
-    color: #149ddd;
-}
-.navbar-redes{
-    width: 8%;
-    text-align: center;
-}
-.navbar-redes a {
-    vertical-align: middle;
-} */
-
 .iconos{
 	width: 40px;
     transition: 200ms;
@@ -46,9 +21,6 @@
     transition: 200ms;
     background-color: black;
 }
-/* .ausa{
-    width: 6%;
-} */
 .ausa a{
     transition: 300ms;
     color: white;
@@ -61,26 +33,6 @@
     width: 80px;
     height: 80px;
 }
-/* 
-.btn-home{
-    display: inline-flex;
-    padding: 0 5px;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 10px 0;
-}
-.btn-home a{
-	text-decoration: none;
-	color: white;
-}
-.btn-home a:hover{
-    color: #d5dfe1;
-}
-.navbar-home{
-    width: 45%;
-    display: inline-flex;
-    justify-content: center;
-} */
 .logo-play img{
     width: 80px;
     border-radius: 50px;
@@ -91,19 +43,6 @@
     transform: scale(1.2);
     transition: 300ms;
 }
-/* .navbar-links{
-    width: 33%;
-    text-align: right;
-    margin-right: 10px;
-}
-.btn-links{
-	display: inline-flex;
-	padding: 0 5px;
-	font-size: 1.2em;
-	font-weight: bold;
-	margin: 10px 0;
-}
-*/
 .btn-links a{
     font-family: 'Roboto', sans-serif;
 }
@@ -118,6 +57,47 @@
     transition: 300ms;
 }
 
+/* main */
+
+.img-carousel-1::before {
+    content: ''; /* Importante: establecer contenido vacío para que el pseudo-elemento sea visible */
+    position: absolute; /* Posicionar el pseudo-elemento sobre la imagen */
+    top: 0;
+    left: 0;
+    width: 100%; /* Opcional: ajustar el ancho y el alto para cubrir completamente la imagen */
+    height: 100%;
+    background: linear-gradient(to right, rgb(187, 25, 25) 0%, rgb(18, 0, 79) 39%, rgba(0,0,0,0) 60%);
+    pointer-events: none; /* Evitar que el pseudo-elemento interfiera con la interacción del usuario */
+}
+
+.img-carousel-2::before {
+    content: ''; /* Importante: establecer contenido vacío para que el pseudo-elemento sea visible */
+    position: absolute; /* Posicionar el pseudo-elemento sobre la imagen */
+    top: 0;
+    left: 0;
+    width: 100%; /* Opcional: ajustar el ancho y el alto para cubrir completamente la imagen */
+    height: 100%;
+    background: linear-gradient(to right, rgb(56, 87, 91) 0%, rgb(8, 8, 9) 39%, rgba(0,0,0,0) 60%);
+    pointer-events: none; /* Evitar que el pseudo-elemento interfiera con la interacción del usuario */
+}
+
+.img-carousel-3::before {
+    content: ''; /* Importante: establecer contenido vacío para que el pseudo-elemento sea visible */
+    position: absolute; /* Posicionar el pseudo-elemento sobre la imagen */
+    top: 0;
+    left: 0;
+    width: 100%; /* Opcional: ajustar el ancho y el alto para cubrir completamente la imagen */
+    height: 100%;
+    background: linear-gradient(to right, rgb(67, 55, 31) 0%, rgb(35, 41, 53) 39%, rgba(0,0,0,0) 60%);
+    pointer-events: none; /* Evitar que el pseudo-elemento interfiera con la interacción del usuario */
+}
+
+.banner-img{
+    min-height: 475px;
+}
+.clase-tarjeta{
+    top: 12%;
+}
 
 /* aboutme.css */
 

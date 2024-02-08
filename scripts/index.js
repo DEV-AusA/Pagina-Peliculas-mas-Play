@@ -26,120 +26,172 @@
 // };
 // const repository = new Repository();
 
-const newContainerHTML = (object) => {
+const newContainerBannerHTML = (object) => {
 
-    const {poster, title, year, director, duration, rate} = object;
-
-    //elementos HTML
-    const colSeisCardMovie = document.createElement('div');
-    const card = document.createElement('div');
-    const rowGcero = document.createElement('div');
-    const colCuatro = document.createElement('div');
-    const newImage = document.createElement('img');
-    const colOcho = document.createElement('div');
-    const cardBody = document.createElement('div');
-    const cardTitle = document.createElement('h2');    
-    const rowAlignItemsCenter = document.createElement('div');
-
-    const rowColOcho = document.createElement('div');
-    const releaseDate = document.createElement('h6');
-    const releaseYear = document.createElement('p');
-    const durationMovieTitle = document.createElement('h6');
-    const durationMovie = document.createElement('small');
-    const directorMovie = document.createElement('h6');
-    const directorMovieName = document.createElement('p');
-
-    const rowColCuatro = document.createElement('div');    
-    const rateMovieTitle = document.createElement('h2');
-    const divRateMovieNumberInline = document.createElement('div');
-    const divRateMovieNumberDFlex = document.createElement('div');    
-    const newRate = document.createElement('h3');
-
-    // clases
-    colSeisCardMovie.classList.add('col-6', 'card-movie');
-    card.classList.add('card', 'mb-3', 'mx-auto', 'd-block', 'shadow-lg');
-    rowGcero.classList.add('row', 'g-0');
-    colCuatro.classList.add('col-4');
-    newImage.classList.add('img-fluid', 'rounded-start');
-    colOcho.classList.add('col-8');
-    cardBody.classList.add('card-body');
-    cardTitle.classList.add('card-title', 'fw-bold', 'm-0', 'mb-4');
-    rowAlignItemsCenter.classList.add('row', 'align-items-center');
-    rowColOcho.classList.add('col-8');
-    releaseDate.classList.add('m-0', 'fw-bolder');
-    releaseYear.classList.add('card-text');
-    durationMovieTitle.classList.add('m-0', 'fw-bolder');
-    durationMovie.classList.add('text-body-secondary');
-    directorMovie.classList.add('card-title', 'mt-3', 'mb-0', 'fw-bolder');
-    directorMovieName.classList.add('card-tex');
-    rowColCuatro.classList.add('col-4', 'text-center');
-    rateMovieTitle.classList.add('card-title');
-    divRateMovieNumberInline.classList.add('d-inline-flex', 'justify-content-center');
-    divRateMovieNumberDFlex.classList.add('d-flex', 'justify-content-center', 'align-items-center', 'bg-warning', 'bg-opacity-25', 'border', 'border-warning', 'rounded-bottom', 'rate');
-    newRate.classList.add('card-text');
+    const {id, poster, title, year, director, duration, rate} = object;
     
-    // cargando contenido
-    newImage.src = poster;
-    cardTitle.textContent = title;
-    releaseDate.textContent = 'Release date:';
-    releaseYear.textContent = year;
-    durationMovieTitle.textContent = 'Duration:';
-    durationMovie.textContent = duration;    
-    directorMovie.textContent = 'Director';
-    directorMovieName.textContent = director;
-    rateMovieTitle.textContent = 'Rate';        
-    newRate.textContent = rate;
+    const divFirstCardBanner = document.createElement('div');
+    divFirstCardBanner.classList.add('carousel-item');
 
-    // cargo contenido a los divs
-    colCuatro.appendChild(newImage);
-    cardBody.appendChild(cardTitle);
-    rowColOcho.appendChild(releaseDate);
-    rowColOcho.appendChild(releaseYear);
-    rowColOcho.appendChild(durationMovieTitle);
-    rowColOcho.appendChild(durationMovie);
-    rowColOcho.appendChild(directorMovie);
-    rowColOcho.appendChild(directorMovieName);
-    rowColCuatro.appendChild(rateMovieTitle);
-    divRateMovieNumberDFlex.appendChild(newRate);
-
-    colSeisCardMovie.appendChild(card);
-    card.appendChild(rowGcero);
-    rowGcero.appendChild(colCuatro);
-    rowGcero.appendChild(colOcho);
-    colOcho.appendChild(cardBody);
-    cardBody.appendChild(rowAlignItemsCenter);
-    rowAlignItemsCenter.appendChild(rowColOcho);
-    rowAlignItemsCenter.appendChild(rowColCuatro);
-    rowColCuatro.appendChild(divRateMovieNumberInline);
-    divRateMovieNumberInline.appendChild(divRateMovieNumberDFlex);
-
-    return colSeisCardMovie;
+    const firstCardBanner = `
+                    <div class="container-fluid row p-0 m-0 container-card-bg position-relative">
+                        <div class="col-4 ps-5 d-flex align-items-center z-1">
+                            <div class="card-movie">
+                                <div class="card mb-3 mx-auto d-block shadow-lg bg-dark bg-opacity-50">
+                                    <div class="row g-0">
+                                        <div class="col-4">
+                                            <img class="img-fluid rounded-start" src="${poster}" alt="${title}">
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="card-body text-white pb-0">
+                                                <h3 class="card-title fw-bold m-0 mb-4">${title}</h3>
+                                                <div class="row align-items-center">
+                                                    <div class="col-8">
+                                                        <h6 class="m-0 fw-bolder">Release date:</h6>
+                                                        <p class="card-text">${year}</p>
+                                                        <h6 class="m-0 fw-bolder">Duration:</h6>
+                                                        <small>${duration}</small>
+                                                        <h6 class="card-title mt-3 mb-0 fw-bolder">Director</h6>
+                                                        <p class="card-text">${director}</p>
+                                                    </div>
+        
+                                                    <div class="col-4 text-center">
+                                                        <h2 class="card-title">Rate</h2>
+                                                        <div class="d-inline-flex justify-content-center">
+                                                            <div
+                                                                class="d-flex justify-content-center align-items-center bg-warning bg-opacity-25 border border-warning rounded-bottom rate">
+                                                                <h3 class="card-text">${rate}</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8 p-0 img-carousel z-0 banner-img img-carousel-${id}">
+                            <div id="banner-${id}" class="w-100 h-100 img-fluid">
+                            </div>
+                        </div>
+                    </div>
+    `;   
+            
+    divFirstCardBanner.innerHTML = firstCardBanner;
+    return divFirstCardBanner;
 };
 
-const cargarActividad = (object) => {
+const newContainerMainHTML = (object) =>{
 
+    const {id, poster, title, year, director, duration, rate} = object;
+
+    const colSeisCardMovie = document.createElement('div');
+    colSeisCardMovie.classList.add('col-6', 'card-movie');
+    colSeisCardMovie.id = `card-${id}`;
+
+    const divCardMain = `
+        <div class="card m-2 mx-auto d-block shadow-lg bg-white bg-opacity-75">
+            <div class="row g-0">
+                <div class="col-4">
+                    <img class="img-fluid rounded-start" src="${poster}" alt="${title}">
+                </div>
+                <div class="col-8">
+                    <div class="card-body">
+                        <h3 class="card-title fw-bold m-0 mb-4">${title}</h3>
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h6 class="m-0 fw-bolder">Release date:</h6>
+                                <p class="card-text">${year}</p>
+                                <h6 class="m-0 fw-bolder">Duration:</h6>
+                                <small class="text-body-secondary">${duration}</small>
+                                <h6 class="card-title mt-3 mb-0 fw-bolder">Director</h6>
+                                <p class="card-text">${director}</p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <h2 class="card-title">Rate</h2>
+                                <div class="d-inline-flex justify-content-center">
+                                    <div class="d-flex justify-content-center align-items-center bg-warning bg-opacity-25 border border-warning rounded-bottom rate">
+                                        <h3 class="card-text">${rate}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    colSeisCardMovie.innerHTML = divCardMain;
+    return colSeisCardMovie;
+}
+
+const cargarCardBanner = (array) => {
+        
+    const cardsBanner = document.getElementById('cards-banner');
+
+    cardsBanner.innerHTML = '';
+
+    const moviesMapeados = array.map(newContainerBannerHTML);
+
+    // activo el primer elemento de banner
+    for (const indice in moviesMapeados) {
+        if (indice == 0) {
+            moviesMapeados[indice].classList.add('active');            
+        }        
+    }
+
+    moviesMapeados.forEach(divCargado => {
+        cardsBanner.appendChild(divCargado);
+    });
+
+    // videos
+    onYouTubeIframeAPIReady();
+
+};
+
+const imgBanner = () =>{
+
+    const cardOne = document.getElementById('banner-1');
+    const cardTwo = document.getElementById('banner-2');
+    const cardTree = document.getElementById('banner-3');
+
+    const urlCardOne = 'https://savethecat.com/wp-content/uploads/2017/05/r_guardiansofthegalaxyvol2_header_nowplaying_62b897d0.jpeg';
+    const urlCardTwo = 'https://retromash.com/wp-content/uploads/2015/12/anewhope.jpg';
+    const urlCardTree = 'https://s29288.pcdn.co/wp-content/uploads/2020/03/fellowship-of-the-ring-poster.jpg';
+
+    cardOne.src = urlCardOne;
+    cardTwo.src = urlCardTwo;
+    cardTree.src = urlCardTree;
+}
+
+const cargarCardMain = (array) => {
     
     const container = document.getElementById('container-movies');
 
     container.innerHTML = '';
 
     // const repository = object.getAllMovies();
-    const moviesMapeados = object.map(newContainerHTML);
-    console.log(moviesMapeados);
+    const moviesMapeados = array.map(newContainerMainHTML);
 
     moviesMapeados.forEach(divCargado => {
         container.appendChild(divCargado);
     });
 };
 
-
 const agregarCard = ()=> {
 
     $.get("https://students-api.2.us-1.fl0.io/movies", (data) => {
 
+    let id = 1;
+
         for (let i = 0; i < data.length; i++) {
+            data[i].id = id;
             // repository.createMovie(data[i]);
-            cargarActividad(data);
+            cargarCardBanner(data);
+            cargarCardMain(data);
+            id++;
         }
         
     });
@@ -174,3 +226,40 @@ const agregarCard = ()=> {
     // }
 };
 agregarCard();
+
+function onYouTubeIframeAPIReady() {
+    createPlayer('CaLNiC-bKHQ', 'banner-1');
+    createPlayer('vZ734NWnAHA', 'banner-2');
+    createPlayer('_nZdmwHrcnw', 'banner-3');
+};
+
+function createPlayer(videoId, playerId) {
+    var player = new YT.Player(playerId, {
+        height: '475',
+        width: '1268',
+        videoId: videoId,
+        playerVars: {
+            'autoplay': 1,
+            'mute': 1,
+            'controls': 0,
+            'showinfo': 0,
+            'modestbranding': 1,
+            'loop': 1,
+            'playlist': videoId,
+            'fs': 0,
+            'iv_load_policy': 3,
+            'title': 0,
+            'disablekb': 1
+        },
+        events: {
+            'onReady': function(event) {
+                event.target.playVideo();
+            }
+        }
+    });
+}
+  
+ // Función que se llama cuando el reproductor está listo
+function onPlayerReady(event) {
+    event.target.playVideo(); // Inicia la reproducción del video automáticamente
+}
