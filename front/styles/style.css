@@ -55,34 +55,24 @@
 
 /* main */
 
-.img-carousel-1::before {
+.video-banner-l::before {
     content: ''; /* Importante: establecer contenido vacío para que el pseudo-elemento sea visible */
     position: absolute; /* Posicionar el pseudo-elemento sobre la imagen */
     top: 0;
     left: 0;
     width: 100%; /* Opcional: ajustar el ancho y el alto para cubrir completamente la imagen */
     height: 100%;
-    background: linear-gradient(to right, rgb(187, 25, 25) 0%, rgb(18, 0, 79) 39%, rgba(0,0,0,0) 60%);
+    background: linear-gradient(to right, rgb(55, 27, 9) 0%, rgb(50, 51, 30) 39%, rgba(0,0,0,0) 60%);
     pointer-events: none; /* Evitar que el pseudo-elemento interfiera con la interacción del usuario */
 }
-.img-carousel-2::before {
+.video-banner-r::before {
     content: ''; /* Importante: establecer contenido vacío para que el pseudo-elemento sea visible */
     position: absolute; /* Posicionar el pseudo-elemento sobre la imagen */
     top: 0;
     left: 0;
     width: 100%; /* Opcional: ajustar el ancho y el alto para cubrir completamente la imagen */
     height: 100%;
-    background: linear-gradient(to right, rgb(56, 87, 91) 0%, rgb(8, 8, 9) 39%, rgba(0,0,0,0) 60%);
-    pointer-events: none; /* Evitar que el pseudo-elemento interfiera con la interacción del usuario */
-}
-.img-carousel-3::before {
-    content: ''; /* Importante: establecer contenido vacío para que el pseudo-elemento sea visible */
-    position: absolute; /* Posicionar el pseudo-elemento sobre la imagen */
-    top: 0;
-    left: 0;
-    width: 100%; /* Opcional: ajustar el ancho y el alto para cubrir completamente la imagen */
-    height: 100%;
-    background: linear-gradient(to right, rgb(67, 55, 31) 0%, rgb(35, 41, 53) 39%, rgba(0,0,0,0) 60%);
+    background: linear-gradient(to left, rgb(56, 87, 91) 0%, rgb(8, 8, 9) 39%, rgba(0,0,0,0) 60%);
     pointer-events: none; /* Evitar que el pseudo-elemento interfiera con la interacción del usuario */
 }
 .banner-img{

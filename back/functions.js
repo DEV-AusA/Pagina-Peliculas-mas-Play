@@ -9,18 +9,18 @@ const {
 
 const cargarCardBanner = (array) => {
         
-    const cardsBanner = document.getElementById('cards-banner');
+    const cardsBanner = document.getElementById('cards-movies-banner');
 
     cardsBanner.innerHTML = '';
 
     const moviesMapeados = array.map(newContainerBannerHTML);
 
-    // activo el primer elemento de banner
-    for (const indice in moviesMapeados) {
-        if (indice == 0) {
-            moviesMapeados[indice].classList.add('active');            
-        }        
-    }
+    // // activo el primer elemento de banner
+    // for (const indice in moviesMapeados) {
+    //     if (indice == 0) {
+    //         moviesMapeados[indice].classList.add('active');            
+    //     }        
+    // }
 
     moviesMapeados.forEach(divCargado => {
         cardsBanner.appendChild(divCargado);
