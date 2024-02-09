@@ -2,5 +2,14 @@
   "devDependencies": {
     "jest": "^29.7.0",
     "nodemon": "^3.0.3"
+  },
+  "dependencies": {
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts":{
+    "build": "webpack",
+    "test": "jest",
+    "start": "nodemon ./scripts/index.js"
   }
 }
