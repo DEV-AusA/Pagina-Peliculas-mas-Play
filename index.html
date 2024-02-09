@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="3; url=https://dev-ausa.github.io/Pagina-Peliculas-mas-Play/front/index.html">
+    <title>Peliculas +Play</title>
+</head>
+<body>
+    <h1>Cargando las mejores peliculas...</h1>
+    <div class="loader">
+        
+    </div>
+
+    <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            font-size: 3rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            margin-top: 15%;
+        }
+        /* Estilos para el círculo de carga */
+        .loader {
+            border: 8px solid #f3f3f3; /* Grosor del círculo */
+            border-top: 8px solid #3498db; /* Color del círculo */
+            border-radius: 50%; /* Hacer que el borde sea redondeado */
+            width: 50px; /* Ancho del círculo */
+            height: 50px; /* Altura del círculo */
+            animation: spin 1s linear infinite; /* Animación para girar */
+            position: fixed; /* Posición fija */
+            top: 50%; /* Ubicación vertical en el centro */
+            left: 50%; /* Ubicación horizontal en el centro */
+            margin-top: -25px; /* Ajuste para centrar verticalmente */
+            margin-left: -25px; /* Ajuste para centrar horizontalmente */
+        }
+
+        /* Animación para hacer girar el círculo */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }      
+        
+    </style>
+</body>
+</html>
