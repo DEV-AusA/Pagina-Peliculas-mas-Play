@@ -11,6 +11,6 @@
   "scripts": {
     "build": "webpack",
     "test": "jest",
-    "start": "nodemon ./ASINCRONOSTEST.js"
+    "start": "nodemon ./scripts/index.js"
   }
 }

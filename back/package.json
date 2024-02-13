@@ -1,12 +1,18 @@
 {
-  "name": "back",
+  "name": "server-movies",
   "version": "1.0.0",
-  "description": "",
+  "description": "Servidor Back-Movies",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "AusA",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
 }
