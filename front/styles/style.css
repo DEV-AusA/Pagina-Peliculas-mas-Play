@@ -1,4 +1,4 @@
-#body-index{
+#body-index, #body-suge{
     background-color: black;
 }  
 
@@ -15,15 +15,25 @@
     background-color: #d00000;
     border-color: white;
 }
+
 .nav-tabs{
     transition: 700ms;
 }
+
 .nav-tabs:hover {
     background-color: black;
     transition: 700ms;
 }
+
+.item-navbar{
+    font-size: 1.2rem !important;
+}
+
+.item-navbar:hover{
+    background-color: #d00000 !important;
+}
 .iconos{
-	width: 40px;
+    width: 40px;
     transition: 200ms;
 }
 .iconos:hover{
@@ -37,7 +47,7 @@
     transition: 300ms;
 }
 .logo-play img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 300ms;
 }
 .input{
@@ -52,6 +62,19 @@
     width: 80px;
     height: 80px;
 }
+
+.rate-adjust{
+    width: -moz-available;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255,255,255) !important;
+} 
+
 /*cards*/
 .rate-full{
     background-color: rgb(34, 139, 34, 0.4);
@@ -97,6 +120,23 @@
 }
 .banner-img{
     min-height: 475px;
+}
+.card-text-vw{
+    font-size: 0.7vw
+}
+
+.fixed-height {
+    min-height: 600px;
+    height: auto;
+}
+
+.modal-header{
+    background-color: #d00000 !important;
+    color: white;
+}
+
+.footer-index{
+    background-color: #d00000;
 }
 
 /* aboutme.css */
@@ -306,7 +346,7 @@
 }
 
 /* FOOTER */
-footer{
+.footer-aboutme{
 	padding: 10px 20px;
     background: black;
     display: flex;
@@ -314,27 +354,27 @@ footer{
     align-items: center;
 }
 
-footer img{
+.footer-aboutme img{
     width: 50px;
 }
 
-footer h5{
+.footer-aboutme h5{
     font-family: Roboto,sans-serif;
     font-size: 15px;
     font-weight: bold;
     color: white;
 }
-footer button{
+.footer-aboutme button{
 	background: white;
 	border: none;
 	border-radius: 5px;
     transition: 400ms;
 }
-footer button:hover{
+.footer-aboutme button:hover{
     transform: scale(1.1);
     transition: 400ms;
 }
-footer a{
+.footer-aboutme a{
 	display: inline-flex;
 	margin: 5px;
 	font-family: 'Open Sans', sans-serif;
@@ -344,12 +384,41 @@ footer a{
     text-decoration: none;
 }
 
-footer a:hover{
+.footer-aboutme a:hover{
     transition: 400ms;
+}
+
+@media screen and (max-width: 1280px){
+
+    .item-navbar{
+        font-size: 0.8rem !important;
+    }
+    .card-movie{
+        min-width: 75%;
+        min-height: 75%;
+    }
+    .card-text-vw{
+        font-size: 1.5vw
+    }
+}
+@media screen and (max-width: 750px){
+    .description{
+        display: none;
+    }
+    .card-text-vw{
+        font-size: 2vw
+    }
 }
 
 /* RESPONSIVE */
 @media screen and (max-width:430px) {
+
+    .description{
+        display: none;
+    }
+    .card-text-vw{
+        font-size: 4vw
+    }
 
     /* HEADER */
     header{
@@ -408,7 +477,7 @@ footer a:hover{
     .boton:active {
         transform: scale(0.9);
     }
-    footer button:active{
+    .footer-aboutme button:active{
         transform: scale(0.9);
     }
 }

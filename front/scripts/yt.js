@@ -1,8 +1,8 @@
 // cada video con su ID
 function onYouTubeIframeAPIReady() {
-    createPlayer('CaLNiC-bKHQ', 'banner-1');
-    createPlayer('vZ734NWnAHA', 'banner-2');
-    createPlayer('_nZdmwHrcnw', 'banner-3');
+    createPlayer('81UOofW82FY', 'banner-1');
+    createPlayer('6tPKtP46YPw', 'banner-2');
+    createPlayer('uwmDH12MAA4', 'banner-3');
 };
 
 // function que agrega videos al div con id anterior

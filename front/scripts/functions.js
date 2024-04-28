@@ -12,60 +12,28 @@ const {
 const cargarCardBanner = (items) => {
         
     const cardsBanner = document.getElementById('cards-movies-banner');
-
-    //cardsBanner.innerHTML = '';
-
-    //const moviesMapeados = array.map(newContainerBannerHTML);
     const moviesMapeados = newContainerBannerHTML(items);
 
-    // // activo el primer elemento de banner
-    // for (const indice in moviesMapeados) {
-    //     if (indice == 0) {
-    //         moviesMapeados[indice].classList.add('active');            
-    //     }        
-    // }
     cardsBanner.appendChild(moviesMapeados);
-
-    // moviesMapeados.forEach(divCargado => {
-    //     cardsBanner.appendChild(divCargado);
-    // });
-
-    // // videos
-    // onYouTubeIframeAPIReady();
-
 };
 
 const cargarCardMain = (items) => {
     
     const container = document.getElementById('container-movies');
-
-    // container.innerHTML = '';
-
-    // const repository = object.getAllMovies();
-
-    // const moviesMapeados = items.map(newContainerMainHTML);
     const moviesMapeados = newContainerMainHTML(items);
-
-    // moviesMapeados.forEach(divCargado => {
-    //     container.appendChild(divCargado);
-    // });
     container.appendChild(moviesMapeados);
 };
 const cargarCardTr = (items) => {
     
     const containerMoviesTr = document.getElementById('cards-movies-tr');
-
     const moviesTrHTML = newCardTrHTML(items);
-
     containerMoviesTr.appendChild(moviesTrHTML);
 };
 
 const cargarCardBannerSuge = (items) => {
         
     const containerBannerSuge = document.getElementById('cards-movies-suge');
-
     const moviesSugeHTML = newCardBannerSugeHTML(items);
-
     containerBannerSuge.appendChild(moviesSugeHTML);
 
     // videos

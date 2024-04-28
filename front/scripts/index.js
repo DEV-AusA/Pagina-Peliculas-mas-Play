@@ -21,8 +21,6 @@ estrenos = async () => {
         const dataApi = await fetchMovies();
         const dataApiTR = await topRanked();
         const dataApiSuge = await sugeMovies();
-        // verifico esos datos
-        // console.log(dataApi);   
 
         // data API 1
         const dataIndex = [];
@@ -99,6 +97,7 @@ estrenos = async () => {
         
     } catch (error) {
         console.log(error);
+        throw error;
         
     }
 };
