@@ -22,7 +22,8 @@
 </a>
 </p>
 
-<p><strong>Objetivo principal</strong>: Ofrecer una experiencia atractiva y personalizada que haga que los usuarios se sientan bienvenidos y les ayude a descubrir fácilmente una nueva pelicula para ver.<br>
+<p><strong>Objetivo principal</strong>: Ofrecer una experiencia atractiva y personalizada que haga que los usuarios se sientan bienvenidos y les ayude a descubrir fácilmente una nueva pelicula para ver.
+<br>
 <strong>Detalles</strong>: Proyecto desarrollado enteramente en <strong>Javascript</strong> en conjunto con <strong>Express</strong>, para la DB se utilizó <strong>MongoDB</strong> mediante <strong>Mongoose</strong>. Utilizando una API externa para la obtencion de los datos de las movies. Para el Front se implementó <strong>Bootstrap</strong> en conjunto con <strong>CSS</strong> todo el código se encuentra disponible para que lo puedan visualizar.
 </p>
 
