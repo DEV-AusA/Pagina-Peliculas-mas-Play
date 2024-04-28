@@ -1,10 +1,10 @@
 <td width="50%">
 <h3 align="center">+Play Web-Movies</h3>
 <div align="center">                                       
-<a href="https://dev-ausa.github.io/Static-Movie-Page" target="_blank"><img src="https://raw.githubusercontent.com/DEV-AusA/DEV-AusA/main/assets/movies%2BPlay.png" width="400" alt="Web-Movies +Play"></a>
+<a href="https://dev-ausa.github.io/Pagina-Peliculas-mas-Play/" target="_blank"><img src="https://raw.githubusercontent.com/DEV-AusA/DEV-AusA/main/assets/movies%2BPlay.png" width="400" alt="Web-Movies +Play"></a>
 
 <p>
-<a href="https://dev-ausa.github.io/Static-Movie-Page" target="_blank">
+<a href="https://dev-ausa.github.io/Pagina-Peliculas-mas-Play/" target="_blank">
 <img src="https://img.shields.io/badge/demo%20live%20-121013?style=for-the-badge&logo=github&logoColor=white" alt="Demo Live">
 </a>
 </p>
